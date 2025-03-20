@@ -61,6 +61,8 @@ if uploaded_file:
     Moins6sig = val_cible - 6*std_ep_SA/np.sqrt(nb_mesure_dek)
     Plus6sig = val_cible + 6*std_ep_SA/np.sqrt(nb_mesure_dek)
 
+    plt.plot(dates, ep, marker="o", linestyle="-", color="r", label="ep")
+
 
     if numeric_columns:
         column = st.selectbox("Choisissez une colonne pour le graphe", numeric_columns)
