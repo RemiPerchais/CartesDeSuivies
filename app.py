@@ -35,7 +35,7 @@ if uploaded_file:
     numeric_columns = df.select_dtypes(include=['number']).columns.tolist()
 
     dates = df.iloc[2:, 1]
-    #dates = pd.to_datetime(dates)
+    dates = pd.to_datetime(dates)
     st.write("Valeur de dates :", dates)
 
     ep = df.iloc[2:, 2]
@@ -61,9 +61,7 @@ if uploaded_file:
     Moins6sig = val_cible - 6*std_ep_SA/np.sqrt(nb_mesure_dek)
     Plus6sig = val_cible + 6*std_ep_SA/np.sqrt(nb_mesure_dek)
 
-    plt.plot(dates, ep, marker="o", linestyle="-", color="r", label="ep")
-
-
+    
     if numeric_columns:
         column = st.selectbox("Choisissez une colonne pour le graphe", numeric_columns)
 
