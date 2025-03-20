@@ -67,7 +67,7 @@ if uploaded_file:
 
         # Générer le graphe
         fig, ax = plt.subplots()
-        plt.figure(figsize=(10, 5))
+        plt.figure()
         plt.plot(dates, ep, marker="o", linestyle="-", color="r", label="ep")
 
         plt.axhline(y=Moins3sig, color="red", linestyle="--", label="Moyenne")
