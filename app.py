@@ -6,7 +6,7 @@ import numpy as np
 from scipy.stats import zscore
 
 # Titre de l'application
-st.title("Analyse de Fichier Excel 📊")
+st.title("Analyse de Fichier Exxxxcel 📊")
 
 
 # Cacher le menu Streamlit (qui inclut le lien GitHub) et le footer
